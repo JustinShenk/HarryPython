@@ -25,7 +25,7 @@ class Human():
         self.location = location
 
     def say(self, content, emotion=None, quoted=False):
-        print(self.name, emotion, "says,", '"{}"'.format(content))
+        self.__repr__(self.name, emotion, "says,", '"{}"'.format(content))
 
     def guessAge(self):
         if eval(ELDER_THRESHOLD + self.age):
@@ -51,3 +51,24 @@ class Human():
 
     def emotion(self, emotion, content):
         self.emotions.append((emotion, content))
+
+    def relates(self, target, relation):
+        while True:
+            try:
+                self.relations[target] = relation
+                break
+            except AttributeError:
+                self.esteems = {}
+
+    def then(self, action='does something'):
+        print(self.name, 'then', action)
+
+
+class Setting():
+
+    def __init__(self, location, weather, day, time, contains):
+        self.location = location
+        self.weather = weather
+        self.day = day
+        self.time = time
+        self.contains = contains
