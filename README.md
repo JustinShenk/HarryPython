@@ -1,11 +1,13 @@
 # HarryPython
 Learn Python with HarryPython
 
+Harry Potter has been published in Latin, Ancient Greek, and 66 other languages, and is often used as a stepping stone into learning a language. Why not Python as well?
+
 ## Lesson 0 - Setting Up
 
-Setup Python for following along. 
+Setup Python with Jupyter Notebook locally for following along. 
 
-[Learn Python the Hard Way](https://learnpythonthehardway.org/book/ex0.html)
+[Setup Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
 
 ## Lesson 1 - Comments
 
@@ -48,6 +50,12 @@ Extend a list with several items using `extend()`:
 ## Lesson 7
 
 // TODO: Add examples
+
+## TODO
+
+- [ ] Structure outline with examples
+- [ ] Complete book
+- [ ] Get rights from Bloomsbury to publish HarryPython as a book 
 
 ## Contributing
 
