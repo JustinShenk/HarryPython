@@ -6,7 +6,7 @@ CHILD_THRESHOLD = 2
 class Human():
     '''Middle-size race.'''
 
-    def __init__(self, age=None, sex=None, name=None, job=None, appearance=[], possesions=[], activities=[], emotions=[]):
+    def __init__(self, age=None, sex=None, name=None, job=None, appearance=[], possesions=[], activities=[], emotions=[], description=[]):
         self.age = age
         try:
             if any(comparer in self.age for comparer in ['<', '>']):
@@ -20,12 +20,13 @@ class Human():
         self.possessions = possesions
         self.activities = activities
         self.emotions = emotions
+        self.description = description
 
     def set_location(self, location):
         self.location = location
 
     def say(self, content, emotion=None, quoted=False):
-        self.__repr__(self.name, emotion, "says,", '"{}"'.format(content))
+        print(self.name, emotion, "says,", '"{}"'.format(content))
 
     def guessAge(self):
         if eval(ELDER_THRESHOLD + self.age):
@@ -58,7 +59,7 @@ class Human():
                 self.relations[target] = relation
                 break
             except AttributeError:
-                self.esteems = {}
+                self.relations = {}
 
     def then(self, action='does something'):
         print(self.name, 'then', action)
@@ -66,7 +67,7 @@ class Human():
 
 class Setting():
 
-    def __init__(self, location, weather, day, time, contains):
+    def __init__(self, location=None, weather=None, day=None, time=None, contains=[]):
         self.location = location
         self.weather = weather
         self.day = day
